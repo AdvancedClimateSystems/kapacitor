@@ -4,10 +4,8 @@
 #   pip install protobuf==3.0.0b2
 
 import sys
-import udf_pb2
+from kapacitor.udf import udf_pb2
 from threading import Lock, Thread
-from Queue import Queue
-import io
 import traceback
 import socket
 import os
@@ -59,6 +57,7 @@ class Agent(object):
     # This method returns immediately
     def start(self):
         self._thread = Thread(target=self._read_loop)
+        self._thread.daemon = True
         self._thread.start()
 
     # Wait for the Agent to terminate.
@@ -188,6 +187,7 @@ class Server(object):
                 conn, addr = self._listener.accept()
                 conn = conn.makefile()
                 thread = Thread(target=self._accepter.accept, args=(conn,addr))
+                thread.daemon = True
                 thread.start()
         except:
             self.stop()
@@ -198,4 +198,3 @@ class Server(object):
             os.remove(self._socket_path)
         except:
             pass
-

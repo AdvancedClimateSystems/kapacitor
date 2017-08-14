@@ -21,3 +21,6 @@ kapacitor*.zip
 /kapacitord
 /tickfmt
 /tickdoc
+
+.env
+.vscode
