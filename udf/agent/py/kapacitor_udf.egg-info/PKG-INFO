@@ -1,0 +1,9 @@
+Metadata-Version: 1.2
+Name: kapacitor-udf
+Version: 1.0.1
+Summary: Kapacitor UDF Agent library
+Home-page: github.com/influxdata/kapacitor
+Maintainer-email: support@influxdb.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

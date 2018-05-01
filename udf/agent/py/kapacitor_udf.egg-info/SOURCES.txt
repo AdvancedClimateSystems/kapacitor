@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+kapacitor/__init__.py
+kapacitor/udf/__init__.py
+kapacitor/udf/agent.py
+kapacitor/udf/udf_pb2.py
+kapacitor_udf.egg-info/PKG-INFO
+kapacitor_udf.egg-info/SOURCES.txt
+kapacitor_udf.egg-info/dependency_links.txt
+kapacitor_udf.egg-info/requires.txt
+kapacitor_udf.egg-info/top_level.txt
